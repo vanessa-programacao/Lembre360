@@ -1,0 +1,27 @@
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos Python que podem ser ignorados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambiente virtual
+venv/
+.env/
+
+# Arquivos do editor
+*.swp
+*.swo
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Dados grandes ou desnecessários
+*.csv
+
+# Arquivos do sistema operacional
+.DS_Store
