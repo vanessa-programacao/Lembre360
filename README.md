@@ -4,11 +4,12 @@ Lembre360 é uma aplicação para organizar e monitorar compromissos fiscais e f
 
 ## Funcionalidades
 
-- Upload do arquivo Excel (.xlsx) com os compromissos.
+- Upload do arquivo Excel (.xlsx) ou CSV com os compromissos.
 - Filtragem por status e cliente.
 - Alertas para compromissos próximos do vencimento.
 - Gráfico interativo da distribuição dos compromissos por status.
-- Exportação dos dados filtrados para Excel.
+- Exportação dos dados filtrados para CSV.
+- Aplicação hospedada online para acesso fácil via navegador.
 
 ## Tecnologias Utilizadas
 
@@ -18,23 +19,29 @@ Lembre360 é uma aplicação para organizar e monitorar compromissos fiscais e f
 - Plotly Express  
 - OpenPyXL  
 
-## Como usar
+## Acesse o app online
+
+Você pode acessar o Lembre360 diretamente no navegador, sem precisar instalar nada:
+
+[👉 https://lembre360-78pbyhnf2hz5iiwj2kj3kz.streamlit.app/](https://lembre360-78pbyhnf2hz5iiwj2kj3kz.streamlit.app/)
+
+## Como usar localmente
 
 1. Clone o repositório:  
-   git clone https://github.com/vanessa-programacao/lembre360.git
+   `git clone https://github.com/vanessa-programacao/lembre360.git`
 
 2. Entre na pasta do projeto:  
-   cd Lembrete_360
+   `cd Lembrete_360`
 
 3. Instale as dependências:  
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
 
 4. Rode o app:  
-   streamlit run LEMBRETE_360.py
+   `streamlit run LEMBRETE_360.py`
 
-5. No app, faça upload do arquivo Excel contendo os compromissos.
+5. No app, faça upload do arquivo Excel ou CSV contendo os compromissos.
 
-## Estrutura do arquivo Excel
+## Estrutura do arquivo Excel/CSV
 
 O arquivo deve conter as seguintes colunas:
 
