@@ -1,15 +1,14 @@
 # Lembre360 - Painel de Compromissos dos Clientes
 
-O Lembre360 é uma solução digital desenvolvida para organizar e monitorar compromissos fiscais e financeiros dos clientes. Ele oferece uma visão clara dos prazos importantes, ajudando a evitar esquecimentos, multas e retrabalho.
+Lembre360 é uma aplicação para organizar e monitorar compromissos fiscais e financeiros dos clientes, facilitando o acompanhamento de prazos e status.
 
 ## Funcionalidades
 
-- Filtro interativo por status do compromisso e cliente.
-- Alerta visual para compromissos próximos do vencimento.
-- Painel com resumo gráfico da distribuição de compromissos por status.
-- Upload do arquivo Excel pelo cliente para carregar os dados.
+- Upload do arquivo Excel (.xlsx) com os compromissos.
+- Filtragem por status e cliente.
+- Alertas para compromissos próximos do vencimento.
+- Gráfico interativo da distribuição dos compromissos por status.
 - Exportação dos dados filtrados para Excel.
-- Atualização automática dos dados a partir do arquivo enviado.
 
 ## Tecnologias Utilizadas
 
@@ -17,69 +16,63 @@ O Lembre360 é uma solução digital desenvolvida para organizar e monitorar com
 - Pandas  
 - Streamlit  
 - Plotly Express  
-- OpenPyXL (para ler Excel)
+- OpenPyXL  
 
 ## Como usar
 
-1. Clone este repositório:  
-   ```bash
+1. Clone o repositório:  
    git clone https://github.com/vanessa-programacao/lembre360.git
-Navegue até a pasta do projeto:
 
-bash
-Copiar
-Editar
-cd lembrete_360
-Instale as dependências:
+2. Entre na pasta do projeto:  
+   cd Lembrete_360
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Execute o aplicativo:
+3. Instale as dependências:  
+   pip install -r requirements.txt
 
-bash
-Copiar
-Editar
-streamlit run LEMBRETE_360.py
-Na interface do app, o cliente deve carregar seu arquivo Excel (.xlsx) contendo os compromissos.
+4. Rode o app:  
+   streamlit run LEMBRETE_360.py
 
-Estrutura do arquivo Excel
-O arquivo Excel deve conter, no mínimo, as seguintes colunas:
+5. No app, faça upload do arquivo Excel contendo os compromissos.
 
-Cliente	Descrição	Data	Valor	Status
-Nome A	Exemplo	2025-06-10	1000	Pendente
-Nome B	Exemplo	2025-07-15	2000	Em andamento
-Nome C	Exemplo	2025-05-20	500	Concluído
+## Estrutura do arquivo Excel
 
-O campo Data deve estar no formato de data (AAAA-MM-DD).
+O arquivo deve conter as seguintes colunas:
 
-O campo Status deve conter um dos valores:
+| Cliente   | Descrição                 | Data       | Valor | Status       |
+|-----------|---------------------------|------------|-------|--------------|
+| Empresa A | Descrição do compromisso   | 2025-06-10 | 1500  | Pendente     |
+| Empresa B | Outro compromisso          | 2025-07-01 | 2000  | Em andamento |
+| Empresa C | Compromisso finalizado     | 2025-05-20 | 500   | Concluído    |
 
-Pendente
+- **Data** no formato AAAA-MM-DD.  
+- **Status** deve ser um dos: Pendente, Em andamento, Concluído.
 
-Em andamento
+## Estrutura do Projeto
 
-Concluído
+/LEMBRETE_360  
+├── LEMBRETE_360.py  
+├── requirements.txt  
+├── README.md  
+├── iniciar_lembrete360.bat  
+└── /modelo  
+    └── exemplo_compromissos.xlsx  
 
-Após o upload, o sistema automaticamente:
+## Atualizando o projeto no Git
 
-Gera alertas para compromissos próximos do vencimento.
+No terminal, dentro da pasta do projeto, execute:
 
-Mostra gráfico interativo da distribuição por status.
+git status  
+git add .  
+git commit -m "Sua mensagem de commit"  
+git push origin main  
 
-Permite exportar os dados filtrados para Excel.
+(Substitua "main" pela sua branch principal caso seja diferente.)
 
-Estrutura do projeto
-bash
-Copiar
-Editar
-/LEMBRETE_360
-├── LEMBRETE_360.py
-├── iniciar_lembrete360.bat
-├── requirements.txt
-├── README.md
-└── /modelo (opcional)
-    └── exemplo_compromissos.xlsx
-Contato
-Desenvolvido por Vanessa — Ciência de Dados & Soluções Digitais
+## Contato
+
+Desenvolvido por Vanessa — Ciência de Dados & Soluções Digitais  
+GitHub: https://github.com/vanessa-programacao
+
+## Licença
+
+Projeto open source sob licença MIT.
