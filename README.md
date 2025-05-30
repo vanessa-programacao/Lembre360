@@ -7,48 +7,79 @@ O Lembre360 é uma solução digital desenvolvida para organizar e monitorar com
 - Filtro interativo por status do compromisso e cliente.
 - Alerta visual para compromissos próximos do vencimento.
 - Painel com resumo gráfico da distribuição de compromissos por status.
-- Exportação dos dados filtrados para CSV.
-- Atualização automática dos dados a partir de um arquivo CSV.
+- Upload do arquivo Excel pelo cliente para carregar os dados.
+- Exportação dos dados filtrados para Excel.
+- Atualização automática dos dados a partir do arquivo enviado.
 
 ## Tecnologias Utilizadas
 
 - Python 3.x  
 - Pandas  
 - Streamlit  
-- Plotly Express
+- Plotly Express  
+- OpenPyXL (para ler Excel)
 
 ## Como usar
 
 1. Clone este repositório:  
-   `git clone https://github.com/vanessa-programacao/lembre360.git`
+   ```bash
+   git clone https://github.com/vanessa-programacao/lembre360.git
+Navegue até a pasta do projeto:
 
-2. Navegue até a pasta do projeto:  
-   `cd lembrete_360`
+bash
+Copiar
+Editar
+cd lembrete_360
+Instale as dependências:
 
-3. Instale as dependências:  
-   `pip install pandas streamlit plotly`
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Execute o aplicativo:
 
-4. Coloque seu arquivo `compromissos_com_clientes.csv` na pasta do projeto, ou altere o caminho no script conforme necessário.
+bash
+Copiar
+Editar
+streamlit run LEMBRETE_360.py
+Na interface do app, o cliente deve carregar seu arquivo Excel (.xlsx) contendo os compromissos.
 
-5. Execute o aplicativo:  
-   `streamlit run seu_arquivo.py`  
-   *(substitua `seu_arquivo.py` pelo nome do seu script Python)*
+Estrutura do arquivo Excel
+O arquivo Excel deve conter, no mínimo, as seguintes colunas:
 
-## Estrutura do arquivo CSV
+Cliente	Descrição	Data	Valor	Status
+Nome A	Exemplo	2025-06-10	1000	Pendente
+Nome B	Exemplo	2025-07-15	2000	Em andamento
+Nome C	Exemplo	2025-05-20	500	Concluído
 
-O arquivo CSV deve conter, no mínimo, as seguintes colunas:
+O campo Data deve estar no formato de data (AAAA-MM-DD).
 
-- `Cliente` — Nome do cliente  
-- `Descrição` — Descrição do compromisso  
-- `Data` — Data do compromisso (formato AAAA-MM-DD)  
-- `Valor` — Valor financeiro relacionado  
-- `Status` — Status atual do compromisso (Ex: Pendente, Em Andamento, Concluído)
+O campo Status deve conter um dos valores:
 
-## Contato
+Pendente
 
-Desenvolvido por Vanessa — Ciência de Dados & Soluções Digitais  
-[GitHub](https://github.com/vanessa-programacao)
+Em andamento
 
-## Licença
+Concluído
 
-Projeto de código aberto. Licença MIT.
+Após o upload, o sistema automaticamente:
+
+Gera alertas para compromissos próximos do vencimento.
+
+Mostra gráfico interativo da distribuição por status.
+
+Permite exportar os dados filtrados para Excel.
+
+Estrutura do projeto
+bash
+Copiar
+Editar
+/LEMBRETE_360
+├── LEMBRETE_360.py
+├── iniciar_lembrete360.bat
+├── requirements.txt
+├── README.md
+└── /modelo (opcional)
+    └── exemplo_compromissos.xlsx
+Contato
+Desenvolvido por Vanessa — Ciência de Dados & Soluções Digitais
