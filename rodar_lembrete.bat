@@ -1,7 +1,5 @@
 @echo off
-REM Ativa o ambiente virtual, se usar (senão, pode comentar essa linha)
-REM call C:\caminho\para\seu_venv\Scripts\activate.bat
-
-streamlit run "C:\Users\Vanessa\Desktop\LEMBRETE_360\LEMBRETE_360.py"
-
-pause
+start "" streamlit run C:\Users\Vanessa\Desktop\LEMBRETE_360\LEMBRETE_360.py
+timeout /t 5 /nobreak
+start "" http://localhost:8501
+exit
