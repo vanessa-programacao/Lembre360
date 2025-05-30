@@ -47,27 +47,6 @@ O arquivo deve conter as seguintes colunas:
 - **Data** no formato AAAA-MM-DD.  
 - **Status** deve ser um dos: Pendente, Em andamento, Concluído.
 
-## Estrutura do Projeto
-
-/LEMBRETE_360  
-├── LEMBRETE_360.py  
-├── requirements.txt  
-├── README.md  
-├── iniciar_lembrete360.bat  
-└── /modelo  
-    └── exemplo_compromissos.xlsx  
-
-## Atualizando o projeto no Git
-
-No terminal, dentro da pasta do projeto, execute:
-
-git status  
-git add .  
-git commit -m "Sua mensagem de commit"  
-git push origin main  
-
-(Substitua "main" pela sua branch principal caso seja diferente.)
-
 ## Contato
 
 Desenvolvido por Vanessa — Ciência de Dados & Soluções Digitais  
